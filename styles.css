@@ -1306,3 +1306,14 @@ td{color:#D2D8DE}
 .expiry-alert,.home-expiry-position .expiry-alert{padding:14px 18px!important;min-height:0!important}
 
 
+
+/* ---------- Fading background photographs behind experience and service sections ---------- */
+body.biz{overflow-x:hidden}
+.bgfade-sec{position:relative;isolation:isolate}
+.biz-service.bgfade-sec{padding:44px 0;border-top:0}
+.bgfade{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;overflow:hidden;pointer-events:none;background:#0D0F12}
+.bgfade-img{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transform:scale(1.04);transition:opacity 1.8s ease,transform 7s ease-out;filter:saturate(.75)}
+.bgfade-img.on{opacity:.44;transform:scale(1)}
+.bgfade::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,15,18,.92) 0%,rgba(13,15,18,.66) 45%,rgba(13,15,18,.42) 100%),linear-gradient(180deg,#0D0F12 0%,rgba(13,15,18,0) 14%,rgba(13,15,18,0) 86%,#0D0F12 100%)}
+@media (max-width:760px){.bgfade::after{background:linear-gradient(180deg,#0D0F12 0%,rgba(13,15,18,.78) 12%,rgba(13,15,18,.82) 88%,#0D0F12 100%)}.bgfade-img.on{opacity:.3}}
+@media (prefers-reduced-motion:reduce){.bgfade-img{transition:none;transform:none}}
