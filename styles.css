@@ -1277,3 +1277,32 @@ body.biz{padding-bottom:0}
 .biz-cta .btn{width:auto!important;flex:none!important}
 .biz .hero.home{min-height:0!important}
 @media(max-width:560px){.biz .dashboard-metrics{grid-template-columns:1fr!important}.biz .dashboard-metrics a:nth-child(even){padding-left:14px!important;border-left:0!important}}
+/* ---------- Version 13 ----------
+   Readable text, a menu button that stays in place while scrolling,
+   calmer alert panels and sentence-case buttons. */
+:root{--muted:#CAD1D9;--dim:#A1AAB4}
+.lead{color:#D6DCE2}
+.proc-steps{color:#F0F2F5}
+.proc-who,.proc-toc span{color:#CAD1D9}
+.proc-notes dd{color:#F3F5F7}
+.proc-end{color:#B4BCC5}
+.gc{color:#E2E6EA}
+.gc p,.gc li{color:#DCE1E6}
+td{color:#D2D8DE}
+.launch-desc{color:#C8D1DA}
+
+/* Menu button: fixed in the same place on every page, over the page photography */
+.site-head .menu-btn{position:fixed;top:calc(22px + env(safe-area-inset-top,0px));right:max(20px,calc((100% - 1200px) / 2 + 20px));z-index:45;background:rgba(11,16,22,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,.35)}
+
+/* Buttons: sentence case, smaller type */
+.btn{text-transform:none!important;letter-spacing:.01em!important;font-size:13px!important}
+.btn.small{font-size:12.5px!important}
+
+/* Alert panels on the home page and dashboard: smaller type */
+.expiry-alert-title,.home-expiry-position .expiry-alert-title{font-size:15px!important;text-transform:none!important;letter-spacing:.01em!important}
+.expiry-alert-count,.home-expiry-position .expiry-alert-count{font-size:26px!important}
+.expiry-alert-sub,.home-expiry-position .expiry-alert-sub{font-size:12.5px!important}
+.expiry-alert-arrow,.home-expiry-position .expiry-alert-arrow{font-size:11.5px!important;text-transform:none!important;letter-spacing:.01em!important}
+.expiry-alert,.home-expiry-position .expiry-alert{padding:14px 18px!important;min-height:0!important}
+
+
