@@ -32,7 +32,7 @@
       timer = setInterval(function(){
         layers[i].classList.remove('on'); i = (i + 1) % layers.length;
         layers[i].classList.add('on'); load(layers[(i + 1) % layers.length]);
-      }, 5500);
+      }, 5000);
     }
     function stop(){ if(timer){ clearInterval(timer); timer = null; } }
     if('IntersectionObserver' in window){
