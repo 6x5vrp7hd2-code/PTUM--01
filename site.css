@@ -163,3 +163,26 @@ h1,h2{font-weight:500;letter-spacing:-.01em;margin:0}
 .hero-plain{min-height:0;padding:calc(130px + var(--top)) 0 8px;border-bottom:0}
 .hero-plain+.txt{padding-top:28px}
 .ft-cols{border-top:0;padding-top:0}
+
+/* Product page */
+.ptr{border-top:1px solid var(--line);padding:clamp(40px,6vw,64px) 0}
+.ptr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ptr-in p{margin:0;max-width:56ch;color:#D3D8DD;font-size:16px}
+.hero-plain .btn{margin-top:4px}
+.steps{list-style:none;counter-reset:s;margin:8px 0 8px;padding:0;max-width:62ch}
+.steps li{counter-increment:s;position:relative;padding:14px 0 14px 46px;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:15px;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--orange)}
+.steps b{display:block;font-weight:500;font-size:16px}
+.steps span{display:block;font-size:14px;color:var(--mute)}
+.faq{max-width:62ch;margin:8px 0 34px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:14px 28px 14px 0;font-size:16px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:20px;color:var(--orange)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 16px;color:var(--mute);font-size:15px}
+.txt+.sc{border-top:0;padding-top:0}
+.ft-cols{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.ft-cols{grid-template-columns:1fr 1fr}}
+.sc+.txt{padding-top:0}
