@@ -40,3 +40,10 @@
     } else start();
   });
 })();
+
+/* Header gets a solid background once the page is scrolled */
+(function(){
+  var hd = document.querySelector('.hd'); if(!hd) return;
+  function set(){ hd.classList.toggle('solid', window.scrollY > 40); }
+  set(); window.addEventListener('scroll', set, {passive:true});
+})();
